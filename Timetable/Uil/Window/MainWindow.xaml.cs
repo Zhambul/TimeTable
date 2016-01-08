@@ -1,8 +1,7 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows;
+﻿using System.Windows;
 using MahApps.Metro.Controls;
+using Timetable.Bll;
+using Timetable.Bll.Project;
 using Timetable.Dbl;
 
 namespace Timetable.Uil.Window
@@ -20,7 +19,10 @@ namespace Timetable.Uil.Window
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-            new ViewDocumentWindow(new ExcelHelper()).Show();
+            var builder = new ProjectBuilder();
+            builder.SetDbHelper(new ExcelHelper());
+            builder.SetTimeTableCaretaker(new TimeTableCaretaker(new XmlHelper()));
+            new ViewDocumentWindow(builder.Result).Show();
             Close();
         }
 

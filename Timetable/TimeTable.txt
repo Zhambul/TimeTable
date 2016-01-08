@@ -130,6 +130,12 @@
         <LessonClassroom>г591</LessonClassroom>
         <LessonTeacher>Макаров</LessonTeacher>
       </Lesson>
+      <Lesson>
+        <LessonName>Матан</LessonName>
+        <LessonStartTime />
+        <LessonClassroom />
+        <LessonTeacher />
+      </Lesson>
     </Day>
     <Day>
       <DayName>Среда</DayName>

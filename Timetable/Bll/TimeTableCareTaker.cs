@@ -7,7 +7,7 @@ using Timetable.Dbl;
 
 namespace Timetable.Bll
 {
-    class TimeTableCaretaker
+    public class TimeTableCaretaker
     {
         private readonly DbHelperBase _dbHelper;
 

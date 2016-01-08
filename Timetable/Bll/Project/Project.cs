@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Timetable.Dbl;
 
 namespace Timetable.Bll.Project
 {
-    class Project : IProject
+    public class Project
     {
+        public TimeTableCaretaker TimeTableCaretaker { get; set; }
+
+        public DbHelperBase DbHelper { get; set; }
+
     }
 }

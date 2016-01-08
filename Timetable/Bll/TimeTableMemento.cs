@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Timetable.Bll
 {
-    class TimeTableMemento
+    public class TimeTableMemento
     {
         public Week FirstWeek;
 

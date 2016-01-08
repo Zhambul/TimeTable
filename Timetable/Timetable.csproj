@@ -75,6 +75,7 @@
     </ApplicationDefinition>
     <Compile Include="Bll\Day.cs" />
     <Compile Include="Bll\Lessons\LessonFabric.cs" />
+    <Compile Include="Bll\Project\ProjectBuilder.cs" />
     <Compile Include="Bll\TimeTableCareTaker.cs" />
     <Compile Include="Bll\TimeTableMemento.cs" />
     <Compile Include="Bll\Week.cs" />
@@ -102,9 +103,6 @@
     <Compile Include="Bll\LessonFabric\LessonFabric.cs" />
     <Compile Include="Bll\Lessons\ILesson.cs" />
     <Compile Include="Bll\Lessons\Lesson.cs" />
-    <Compile Include="Bll\ProjectBuilder\IProjectBuilder.cs" />
-    <Compile Include="Bll\ProjectBuilder\PRojectBuilder.cs" />
-    <Compile Include="Bll\Project\IProject.cs" />
     <Compile Include="Bll\Project\Project.cs" />
     <Compile Include="Dbl\XmlHelper.cs" />
     <Compile Include="Dbl\DbHelperBase.cs" />

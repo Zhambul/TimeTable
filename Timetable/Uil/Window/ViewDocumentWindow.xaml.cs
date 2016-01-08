@@ -11,6 +11,7 @@ using MahApps.Metro.Controls;
 using Timetable.Annotations;
 using Timetable.Bll;
 using Timetable.Bll.Lessons;
+using Timetable.Bll.Project;
 using Timetable.Dbl;
 
 namespace Timetable.Uil.Window
@@ -31,7 +32,6 @@ namespace Timetable.Uil.Window
                 OnPropertyChanged();
             }
         }
-
         public Week SecondWeek
         {
             get { return _secondWeek; }
@@ -47,12 +47,13 @@ namespace Timetable.Uil.Window
         private readonly TimeTableCaretaker _timeTableCaretaker;
   
 
-        public ViewDocumentWindow( DbHelperBase dbHelper)
+        public ViewDocumentWindow(Project project)
         {
-            _dbHelper = dbHelper;
+            _dbHelper = project.DbHelper;
+            _timeTableCaretaker = project.TimeTableCaretaker;
+
             InitializeComponent();
             DataContext = this;
-            _timeTableCaretaker = new TimeTableCaretaker(new XmlHelper());
             var state = _timeTableCaretaker.GetState();
             FirstWeek = state.FirstWeek;
             SecondWeek = state.SecondWeek;
